@@ -17,9 +17,16 @@ body {
   --darkGray: #313131;
   --lightGray: #595959;
   --midnightBlue: #15243b;
+  --skyBlue: #6495ed;
 }
 
 .container {
   width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 750px;
+  width: 100%;
   margin: 0 auto;
 }
