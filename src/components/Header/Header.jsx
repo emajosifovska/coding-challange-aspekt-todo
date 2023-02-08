@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import SelectButton from "../Button/SelectButton";
+import TodoModal from "../TodoModal/TodoModal";
 import "./Header.scss";
 
 export default function Header() {
@@ -12,6 +13,7 @@ export default function Header() {
         <option value="active">Active</option>
         <option value="completed">Completed</option>
       </SelectButton>
+      <TodoModal />
     </div>
   );
 }
