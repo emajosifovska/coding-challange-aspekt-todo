@@ -5,7 +5,7 @@ import TodoModal from "../TodoModal/TodoModal";
 import "./Header.scss";
 
 export default function Header() {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="header">
