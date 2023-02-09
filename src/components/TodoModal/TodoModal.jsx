@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { MdOutlineClose } from "react-icons/md";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
 import Button from "../Button/Button";
 import "./TodoModal.scss";
 import { addTodo } from "../../redux/actions";
@@ -11,11 +11,13 @@ export default function TodoModal({ openModal, setOpenModal }) {
 
   const [name, setName] = useState("");
 
+  const unique_id = uuid();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let todoObj = {
-      id: uuidv4,
+      id: unique_id,
       todo: name,
       complited: false,
       active: true,

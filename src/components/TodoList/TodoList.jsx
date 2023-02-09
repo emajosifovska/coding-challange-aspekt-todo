@@ -1,16 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { format } from "date-fns";
 import { MdDelete, MdEdit } from "react-icons/md";
+import { removeTodo } from "../../redux/actions";
 import "./TodoList.scss";
 
 export default function TodoList() {
-  const todos = useSelector((state) => state.todoReducer);
+  const dispatch = useDispatch();
 
-  const handleChange = (e) => {
-    if (e.target.checked) {
-    }
-  };
+  const todos = useSelector((state) => state.todoReducer);
 
   return todos.map((todo) => (
     <div key={todo.id} className="todo-container">
@@ -24,12 +22,15 @@ export default function TodoList() {
         </div>
       </div>
       <div className="todo-actions">
-        <div className="delete-button">
+        <button
+          className="delete-button"
+          onClick={() => dispatch(removeTodo(todo.id))}
+        >
           <MdDelete />
-        </div>
-        <div className="edit-button">
+        </button>
+        <button className="edit-button">
           <MdEdit />
-        </div>
+        </button>
       </div>
     </div>
   ));

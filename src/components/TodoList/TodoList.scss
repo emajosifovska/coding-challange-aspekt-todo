@@ -42,5 +42,18 @@
     display: flex;
     gap: 10px;
     margin-right: 1rem;
+
+    button {
+      cursor: pointer;
+      font-size: 1.2rem;
+      outline: none;
+      border: none;
+      background: transparent;
+      color: var(--darkGray);
+
+      :hover {
+        color: var(--lightGray);
+      }
+    }
   }
 }
