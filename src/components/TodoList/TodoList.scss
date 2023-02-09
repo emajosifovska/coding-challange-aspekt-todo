@@ -1,0 +1,46 @@
+.todo-container {
+  background-color: var(--beige);
+  color: var(--darkGray);
+  border-radius: 16px;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .todo-content {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+
+    input {
+      margin-right: 0.5rem;
+    }
+
+    .todo-name-date {
+      display: flex;
+      flex-direction: column;
+
+      .todo-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .todo-date {
+        font-size: 0.8rem;
+      }
+
+      .line-through {
+        text-decoration: line-through;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .todo-actions {
+    display: flex;
+    gap: 10px;
+    margin-right: 1rem;
+  }
+}
