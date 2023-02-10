@@ -2,6 +2,7 @@ export const ADD_TODO = "ADD_TODO";
 export const REMOVE_TODO = "REMOVE_TODO";
 export const UPDATE_TODO = "UPDATE_TODO";
 export const UPDATE_STATUS = "UPDATE_STATUS";
+export const SET_STATUS = "SET_STATUS";
 
 export const addTodo = (payload) => {
   return {
@@ -28,5 +29,12 @@ export const updateStatus = (payload) => {
   return {
     type: UPDATE_STATUS,
     payload,
+  };
+};
+
+export const setStatus = (filter) => {
+  return {
+    type: SET_STATUS,
+    payload: { filter },
   };
 };

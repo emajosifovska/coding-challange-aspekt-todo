@@ -57,3 +57,14 @@
     }
   }
 }
+
+.no-todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .no-todo {
+    color: var(--standardWhite);
+    font-size: 1.4rem;
+  }
+}
