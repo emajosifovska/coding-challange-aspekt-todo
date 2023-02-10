@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../Button/Button";
 import SelectButton from "../Button/SelectButton";
-import TodoModal from "../TodoModal/TodoModal";
 import "./Header.scss";
 
-export default function Header() {
-  const [openModal, setOpenModal] = useState(false);
-
+export default function Header({ setOpenModal }) {
   return (
     <div className="header">
       <Button variant="button-primary" onClick={() => setOpenModal(true)}>
@@ -17,7 +14,6 @@ export default function Header() {
         <option value="active">Active</option>
         <option value="completed">Completed</option>
       </SelectButton>
-      <TodoModal openModal={openModal} setOpenModal={setOpenModal} />
     </div>
   );
 }
